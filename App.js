@@ -126,6 +126,15 @@ export default function App() {
           </View>
         </View>
 
+        <View style={styles.bannerVerde}>
+          <Image style={styles.bannerLogoVerde} source={require('./assets/ouvinte.png')}></Image>
+          <Text style={styles.bannerSubVerde}>Curta a sua </Text>
+          <Text style={styles.bannerTituloVerde}>Música</Text>
+          <Text style={styles.bannerDescVerde}>
+            Sem interrupções.
+          </Text>
+        </View>
+
         <Text style={styles.secaoTitulo}>As Mais Tocadas</Text>
         <View style={styles.musicasScroll}>
           {MUSICAS.map(m => (
@@ -154,6 +163,9 @@ export default function App() {
           </Text>
         </TouchableOpacity>
           </View>
+        </View>
+        <View style={styles.bottom}>
+          <Text style={styles.secaoBottom}>Desenvolvido por : Gustavo Millamonte</Text>
         </View>
         <View style={styles.spacer} />
       </ScrollView>
@@ -306,5 +318,42 @@ scrollArea: {
     color: WHITE,
     fontSize: 13,
     fontWeight: 'bold',
+  },
+  secaoBottom: {
+    color: LIGHT_GRAY,
+    textAlign: 'center',
+    marginTop: 15,
+  },
+  bannerVerde: {
+    backgroundColor: GREEN,
+    marginHorizontal: 20,
+    marginBottom: 20,
+    borderRadius: 16,
+    marginTop: 30,
+    padding: 24,
+    position: 'relative',
+  },
+  bannerLogoVerde: {
+    width: 110,
+    height: 110,
+    position: 'absolute',
+    bottom: 16,
+    right: 30,
+    opacity: 0.85,
+  },
+  bannerSubVerde: {
+    color: BLACK,
+    fontSize: 13,
+  },
+  bannerTituloVerde: {
+    color: WHITE,
+    fontSize: 28,
+    fontWeight: 'bold',
+    marginTop: 4,
+  },
+  bannerDescVerde: {
+    color: BLACK,
+    fontSize: 14,
+    marginTop: 8,
   },
 });
